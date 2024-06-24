@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facturador Online v2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Facturador Online v2</h1>
+    </header>
+    <main>
+        <form action="process.php" method="post">
+            <section class="datos_factura">
+                <label for="name_neg">Nombre del negocio:</label>
+                <input type="text" id="name_neg" name="name_neg" required maxlength="25"> <label
+                    for="fecha">Fecha:</label>
+                <input type="date" name="fecha" id="fecha" required> <label for="n_factura">Número de factura:</label>
+                <input type="number" name="n_factura" id="n_factura" required>
+            </section>
+
+            <section class="datos_cliente">
+                <label for="name_customer">Nombre:</label>
+                <input type="text" name="name_customer" id="name_customer" required maxlength="30">
+
+                <label for="address_customer">Dirección:</label>
+                <input type="text" name="address_customer" id="address_customer" required maxlength="30">
+
+                <label for="num_doc">CUIT / CUIL / DNI:</label>
+                <input type="text" pattern="[0-9]" id="num_doc" name="num_doc" required maxlength="14" minlength="8">
+            </section>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+</body>
+
+</html>
